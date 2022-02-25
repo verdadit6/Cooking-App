@@ -172,7 +172,8 @@ class _WelcomeState extends State<Welcome> {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (BuildContext context) {
-                                  return optionList[index].onPressed!;
+                                  return optionList[index].onPressed ??
+                                      SizedBox();
                                 },
                               ),
                             );
